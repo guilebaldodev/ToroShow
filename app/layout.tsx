@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./ui/Header";
+import Footer from "./ui/Footer";
+import WhatsAppButton from "./ui/WhatsappButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,9 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        
+        <Header></Header>
+        <main>
+          {children}
+        </main>
+        <Footer></Footer>
+        <WhatsAppButton></WhatsAppButton>
       </body>
     </html>
   );

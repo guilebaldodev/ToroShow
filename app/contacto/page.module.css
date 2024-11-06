@@ -1,0 +1,164 @@
+
+.contact-banner{
+    font-family: 'CircularStd-Bold',sans-serif;
+    height: 28vh;
+    background-color: #338BF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/products/bulls/product-6.webp");
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .contact-banner h3{
+    color: #fff;
+    font-size: 36px;
+  }
+  
+  .contact-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+  }
+  
+  .contact-info{
+    width: 85%;
+    margin: auto;
+    padding:4rem 0;
+    font-family: 'CircularStd-Bold',sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    }
+  
+  
+  .contact-subtitle{
+    font-size: 25px;
+    font-weight: 200;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(86, 96, 115,.3)
+  }
+  
+  .contact-buttons{
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .contact-buttons button {
+    width: 9.5rem;
+    height: 2.8rem;
+    margin-right: 10px;
+    display: flex;
+    color: white;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .contact-buttons button img{
+    width: 2rem;
+    margin-right: 6px;
+  }
+  
+  .contact-buttons .red{
+    background-color: #ee4545;
+  }
+  
+  .contact-buttons .green{
+    background-color: rgb(55, 189, 99);
+  }
+  
+  
+  .contact-us{
+    font-family: 'CircularStd-Book',sans-serif;
+    color: #555;
+    font-size: 18px;
+    padding-top:0.8rem;
+  }
+  .contact-title{
+    padding: 1rem 0;
+    font-size: 26px;
+  } 
+  
+  .contact-form-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+  
+  .contact-form-input{
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .contact-form-input label{
+    font-size: 14px;
+    margin-bottom: 3px; 
+  }
+  
+  .contact-form-input input,.contact-form-input textarea{
+    height: 38px;
+    border: 1px solid #cccccc;
+    padding:10px;
+    font-family: 'CircularStd-Book',sans-serif;
+  }
+  
+  .contact-form-input input:focus{
+    border-color: #3898ec;
+    outline: 0;
+  }
+  
+  .contact-form-input textarea{
+    height: 60px;
+    resize: none;
+  }
+  
+  .g-100{
+    width: 100%;
+    grid-column-start: span 2; 
+  }
+  
+  .contact-send-button{
+    margin-top: 2rem;
+    height: 50px;
+    background-color: var(--principal-color);
+    background-color: #4a4a4a;
+    color: white;
+    border: 1px solid #cccccc;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 5px;
+    font-family: 'CircularStd-Book',sans-serif;
+    font-size: 16px;
+  }
+  
+  
+  .contact-ubicaction{
+    display: flex;
+    flex-direction:column ;
+  }
+  
+  .contact-ubication img {
+    width: 100%;
+    padding:2.5rem 2.5rem 1rem 2.5rem;
+  }
+  
+  .contact-ubication p{
+    padding:0 2.5rem;
+    color: #555;
+  
+  }
+  
+  

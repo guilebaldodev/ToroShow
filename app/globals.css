@@ -40,3 +40,208 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* Header */
+
+.navbar-info-container{
+  
+  background-color: #0071DC;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+
+  color: rgba(255,255,255,0.9);
+
+}
+
+
+.navbar-info-duo{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-info-duo img{
+  margin-right: 5px;
+}
+.navbar-info-left{
+  display: flex;
+}
+.navbar-info-left .navbar-info-duo{
+  margin-right: 20px;
+}
+
+
+.navbar-container{
+  display: flex;
+
+  height: 75px;
+  position:sticky;
+  top: 0;
+  justify-content: space-between;
+  /* width: 100%; */
+  align-items: center;
+  overflow: hidden;
+  /* background-color: #338BF0; */
+  background-color: #0071DC;
+
+  z-index: 1000;
+  font-family: 'CircularStd-Bold',sans-serif;
+
+
+}
+.navbar-container a{
+  text-decoration: none;
+}
+
+
+.navbar-container h3{
+  color: #338BF0;
+  color: white;
+
+  font-weight: 700;
+}
+
+.navbar-container a{
+  /* color: #338BF0; */
+  color: black;
+  color: white;
+  font-weight: 500;
+}
+
+.navbar-title{
+  margin-left: 2rem;
+}
+
+.navbar-title a{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight:900;
+}
+
+.navbar-title a img{ 
+  margin-right: 6px;
+}
+
+
+
+
+.navbar-options a{
+  margin-right: 2rem;
+  font-size: 15px;
+}
+
+.navbar-icons{
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.navbar-icons a{
+display: flex;
+}
+
+.navbar-icons img{
+  margin-right: 1.3rem;
+  cursor: pointer;
+}
+
+/* Foooter */
+
+.footer{
+  background-color:#0071DC;;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: 'CircularStd-Book',sans-serif;
+  
+  color: white;
+  justify-content: space-between;
+  /* margin-top: 3rem; */
+}
+
+.footer-info{
+  display: flex;
+  width: 90%;
+  margin: 2.5rem auto 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.circle-logotype{
+  /* flex: 1 1 100px; */
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 50px; */
+}
+
+
+
+.footer-section{
+  /* flex:1 1 20%; */
+  width:min-content;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-section h3{
+  padding-bottom: 1rem;
+  font-size: 20px;
+}
+
+.footer-section ul li{
+  display: flex;
+}
+
+.footer-section img{
+  margin-right: 10px;
+}
+
+.footer-section ul li a{
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-developer{
+  padding: 1rem;
+}
+
+
+/* Whatsapp Buton */
+
+.whatsapp-float {
+  position: fixed;
+  width: 58px;
+  height: 58px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
