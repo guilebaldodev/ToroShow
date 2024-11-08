@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { bullCatalog, Product } from "@/consts";
-import ProductCard from "./ui/Product";
+import ProductCard from "../ui/Product";
 
 export default function Home() {
   return (
@@ -49,8 +49,8 @@ export default function Home() {
           <h3>Nuestros mejores productos</h3>
         </div>
         <div className={styles['landing-products-container']}>
-          {bullCatalog && bullCatalog.map((product:Product) => (
-            <ProductCard key={product.titulo} product={product} />
+          {bullCatalog && bullCatalog.map((product:Product,index) => (
+            <ProductCard key={index} product={product} />
           ))}
         </div>
       </div>

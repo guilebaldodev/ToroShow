@@ -14,7 +14,7 @@ const Footer = () => {
                     <h3>Toro Show</h3>
                     <ul>
                         <li>
-                            <Link href="/productos">Productos</Link>
+                            <Link href="/catalogo">Catologo</Link>
                         </li>
                         <li>
                             <Link href="/terminos">Términos y condiciones</Link>

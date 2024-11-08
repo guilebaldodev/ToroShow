@@ -29,13 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        
-        <Header></Header>
         <main>
           {children}
         </main>
-        <Footer></Footer>
-        <WhatsAppButton></WhatsAppButton>
       </body>
     </html>
   );

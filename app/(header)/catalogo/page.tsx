@@ -1,5 +1,5 @@
 import { bullCatalog } from "@/consts";
-import ProductCard from "../ui/Product";
+import ProductCard from "@/app/ui/Product";
 import Link from "next/link";
 import styles from './page.module.css'
 import Image from "next/image";
