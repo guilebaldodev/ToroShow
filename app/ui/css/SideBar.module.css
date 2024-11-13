@@ -9,7 +9,7 @@
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    font-family: 'CircularStd-Bold',sans-serif;
+    font-weight: 600;
     /* overflow-y: scroll;
     justify-content: space-between;
     scrollbar-width: none; */
