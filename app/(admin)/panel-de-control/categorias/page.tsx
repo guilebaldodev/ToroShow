@@ -1,12 +1,20 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../admin.module.css' // Importar los estilos como un módulo CSS
 import { BullCategories } from '@/consts'
+import { useState } from 'react'
+import CategoryModal from '@/app/ui/CategoryModal'
 
 
 const AdminCategories = () => {
+  const [isCategoryActive, setisCategoryActive] = useState(false);
   return (
     <>
+
+
+    {isCategoryActive && 
+    <CategoryModal closeModal={()=>{setisCategoryActive(false)}}></CategoryModal>}
       <div className={styles['admin-products-container']}>
         <div className={styles['admin-products-titles']}>
           <div className={styles['admin-title-id']}>
@@ -33,7 +41,9 @@ const AdminCategories = () => {
         <div className={styles['admin-table-container']}>
           <div className={styles['admin-table-header']}>
             <div className={styles['admin-table-left']}>
-              <button>
+              <button onClick={()=>{
+                setisCategoryActive(true)
+              }}>
                 <Image
                   src="/admin/add-icon.svg"
                   alt="add icon"

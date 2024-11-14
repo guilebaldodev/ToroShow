@@ -4,10 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../admin.module.css'
 import { bullSales } from '@/consts';
+import { useState } from 'react';
+import SaleModal from '@/app/ui/SaleModal';
 
 const AdminSales = () => {
+  const [isModalActive, setisModalActive] = useState(false);
   return (
-    <div className={styles['admin-products-container']}>
+  <>
+  {isModalActive &&
+    <SaleModal closeModal={()=>{setisModalActive(false)}}></SaleModal>
+  }
+<div className={styles['admin-products-container']}>
       <div className={styles['admin-products-titles']}>
         <div className={styles['admin-title-id']}>
           <Image src="/layout/admin/delivery.png" alt="Delivery Icon" width={25} height={25} />
@@ -23,7 +30,10 @@ const AdminSales = () => {
       <div className={styles['admin-table-container']}>
         <div className={styles['admin-table-header']}>
           <div className={styles['admin-table-left']}>
-            <button>
+            <button  onClick={()=>{
+                
+                setisModalActive(true)
+              }}>
               <Image src="/admin/add-icon.svg" alt="Add Icon" width={20} height={20} />
               Agregar
             </button>
@@ -105,6 +115,7 @@ const AdminSales = () => {
         </div>
       </div>
     </div>
+                    </>
   );
 };
 

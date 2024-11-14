@@ -6,6 +6,8 @@ export interface Product {
     img: string;
 }
 
+
+
 export const bullCatalog: Product[] = [
     {
         titulo: "Toro Extreme",
