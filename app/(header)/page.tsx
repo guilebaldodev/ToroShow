@@ -110,7 +110,7 @@ export default function Home() {
       </div>
 
       <div className={styles['banner-container']}>
-        <div className={styles['banner']}>
+        <div className={`${styles['banner']} ${styles['reverse']}`}>
           <div className={styles['banner-texts']}>
             <h2>IMPULSA TU NEGOCIO CON NUESTROS TOROS MECÁNICOS</h2>
             <p>

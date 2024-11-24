@@ -85,11 +85,10 @@
   flex-direction: column;
 }
 
-.category-item img{
-}
 
 .category-item p{
   padding-top: 16px;
+  text-align: center;
 }
 
 
@@ -193,11 +192,6 @@
   border-radius: 100%;
 }
 
-.landing-about-item img{
-  /* width: 100%;
-  padding: 1.3rem; */
-}
-
 .landing-about-item h3{
   padding: 0.5rem 0;
   text-align: center;
@@ -260,6 +254,201 @@
   grid-row-gap: 2rem;
   grid-column-gap:1rem;
   font-family: "Lexend Deca", sans-serif;
+}
+
+
+@media (max-width: 1200px) {
+
+  .landing-products-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 
 
 }
+
+
+@media (max-width: 950px) {
+
+    .hero-texts h1{
+      font-size: 35px;
+    }
+
+    .hero-texts h3{
+      font-size: 18px;
+    }
+
+      
+  .landing-products-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .landing-products-title h3{
+    font-size: 28px;
+  }
+
+  .banner-texts h2{
+    font-size: 25px;
+  }
+
+  .banner-texts p{
+    font-size: 17px;
+  }
+
+  .fill-banner h3{
+    font-size: 30px;
+  }
+
+  .fill-banner p{
+    font-size: 19px;
+  }
+
+
+}
+
+
+@media (max-width: 850px) {
+
+  .hero-container{
+    flex-direction: column-reverse;
+  }
+
+  .hero-image{
+    width: 50%;
+  }
+
+  .hero-texts{
+    width: 100%;
+    padding: 0rem 0rem 3rem;
+  }
+
+  .hero-texts h1{
+    font-size: 30px;
+  }
+
+  .hero-texts h3{
+    font-size: 17px;
+  }
+
+  .banner{
+    flex-direction: column;
+  }
+
+  .banner.reverse{
+    flex-direction: column-reverse;
+  }
+
+  .banner-img{
+    width: 60%;
+    margin: auto;
+  }
+  .banner-texts{
+    width: 100%;
+  }
+
+  .landing-about-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+
+
+}
+
+
+@media (max-width: 750px) {
+
+  .category-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hero-image{
+    width: 60%;
+  }
+
+  .landing-products-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+
+  .landing-products-title h3{
+    font-size: 25px;
+  }
+
+  .banner-img{
+    width:70%;
+  }
+
+
+  
+  .banner-texts h2{
+    font-size: 25px;
+  }
+
+
+  .fill-banner h3{
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .fill-banner p{
+    text-align: center;
+
+    font-size: 17px;
+    padding-bottom: 1rem;
+  }
+
+
+}
+
+@media (max-width: 550px) {
+
+  .hero-texts h1{
+    font-size: 28px;
+  }
+
+
+  .banner{
+    padding: 3rem 2.5rem;
+  }
+    
+  .banner-texts h2{
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .banner-texts p{
+    font-size: 16px;
+    padding-bottom: 2rem;
+  }
+
+
+  .banner-img{
+    width:80%;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+
+  .landing-products-container{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0rem 2rem;
+  }
+
+  .landing-about-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .banner-img{
+    width:90%;
+  }
+  
+  
+  .banner-texts h2{
+    font-size: 20px;
+  }
+
+
+}
+

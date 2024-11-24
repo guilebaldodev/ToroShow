@@ -435,3 +435,26 @@ summary{
 }
 
 
+
+@media (max-width: 950px) {
+  
+  
+  .navbar-info-container{
+    display: none;
+  }
+}
+
+
+
+
+@media (max-width: 750px) {
+  
+  
+  .navbar-options,.navbar-icons{
+    display: none;
+  }
+
+
+}
+
+
