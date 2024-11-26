@@ -187,3 +187,94 @@
     text-align: center;
   }
   
+
+  @media (max-width: 950px) {
+
+    .about-us-titles h2,.about-info-titles h3{
+        font-size: 30px;
+    
+    }
+
+    .about-us-titles{
+        padding: 0;
+    }
+
+    .about-us-titles h3{
+        font-size: 19px;
+        width: 90%;
+        margin: auto;      
+    }
+
+    .about-us{
+        flex-direction: column;
+    }
+
+    .about-us-img{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .about-us-texts{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 750px){
+
+    .about-us-titles h2,.about-info-titles h3{
+        font-size: 25px;
+    
+    }
+
+
+    .about-us-titles h3{
+        font-size: 17px;
+    }
+
+    .landing-about-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-testimonial-grid{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem;
+    }
+
+    .testimonial{
+        margin-bottom: 3rem;
+    }
+    
+
+
+}
+
+
+@media (max-width: 550px){
+
+    .about-us-titles h2,.about-info-titles h3{
+        font-size: 25px;
+    
+    }
+
+    .about-us-titles h3{
+        font-size: 17px;
+    }
+
+    .about-info-titles h4{
+        font-size: 17px;
+    }
+
+    .landing-about-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .about-testimonial-grid{
+        padding: 3rem 0;
+    }
+
+
+
+
+}

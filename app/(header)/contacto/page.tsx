@@ -64,12 +64,16 @@ const ContactPage = () => {
             style={{width:"100%",height:"auto"}}
             />
             <p>
+              <strong>
               Dirección:
+              </strong>
               <br />
               Av. 18 de marzo 1584 Col. Las Águilas Zapopan Jalisco, México
               <br />
               <br />
+              <strong>
               Correo de contacto:
+              </strong>
               <br />
               toroshow@gmail.com
             </p>

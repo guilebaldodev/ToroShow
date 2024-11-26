@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     background-image: url("/products/bulls/product-6.webp");
-    
     background-size: cover;
     background-position: center;
     position: relative;
@@ -111,6 +110,7 @@
     height: 38px;
     border: 1px solid #cccccc;
     padding:10px;
+    border-radius: 4px;
     font-family: 'CircularStd-Book',sans-serif;
   }
   
@@ -121,6 +121,8 @@
   
   .contact-form-input textarea{
     height: 60px;
+    border-radius: 4px;
+
     resize: none;
   }
   
@@ -158,7 +160,66 @@
   .contact-ubication p{
     padding:0 2.5rem;
     color: #555;
+    font-size: 17px;
+  }
+
+
+ 
+
+
+  @media (max-width: 1000px) {
+
+    .contact-info{
+      flex-direction: column;
+      display: flex;
+      padding-top: 2rem;
+    }
+
+
   
   }
+  
+
+  
+  @media (max-width: 750px) {
+
+    .contact-us p{
+      font-size: 18px;
+    }
+
+    .contact-title{
+      font-size: 23px;
+    }
+
+    .contact-ubication img{
+      padding: 1rem;
+    }
+    
+    .contact-ubication p{
+      padding: 1rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+
+  .contact-ubication img{
+    padding: 0rem;
+  }
+
+  .contact-ubication p{
+    padding: 1rem 0rem;
+  }
+
+  .contact-form-inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+
+
+}
   
   
