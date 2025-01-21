@@ -13,13 +13,12 @@
 html,
 body {
   max-width: 100vw;
-  /* overflow-x: hidden; */
+
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Inter", sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,7 +44,7 @@ a {
 
 /* Header */
 
-.navbar-info-container{
+/* .navbar-info-container{
   
   background-color: #0071DC;
   display: flex;
@@ -87,7 +86,6 @@ a {
   overflow: hidden;
   background-color: #0071DC;
   z-index: 1000;
-  font-family: 'CircularStd-Bold',sans-serif;
 
 
 }
@@ -104,7 +102,6 @@ a {
 }
 
 .navbar-container a{
-  /* color: #338BF0; */
   color: black;
   color: white;
   font-weight: 500;
@@ -146,7 +143,7 @@ display: flex;
 .navbar-icons img{
   margin-right: 1.3rem;
   cursor: pointer;
-}
+} */
 
 /* Foooter */
 
@@ -157,8 +154,6 @@ display: flex;
   flex-direction: column;
   min-height: 40vh;
   /* font-family: "Noto Sans", sans-serif; */
-  font-family: 'CircularStd-Book',sans-serif;
-  
   color: white;
   justify-content: space-between;
   /* margin-top: 3rem; */
@@ -256,7 +251,6 @@ display: flex;
   width: 50%;
   margin: auto;
   padding-top: 5rem;
-  font-family: 'CircularStd-Bold', sans-serif;
 }
 
 .terms-page-container h2{
@@ -270,7 +264,6 @@ display: flex;
 }
 
 .terms-page-container p{
-  font-family: 'CircularStd-Book', sans-serif;
   color: #333;
   padding-bottom: 3rem;
   line-height: 1.35;
@@ -281,11 +274,9 @@ display: flex;
 /* questions */
 
 .questions-container{
-  font-family: 'CircularStd-Bold',sans-serif;
   width: 70%;
   margin: auto;
   padding-top: 5rem;
-  /* background-color: #FCFCFD; */
 }
 
 .questions-container h2{
@@ -294,7 +285,6 @@ display: flex;
 }
 
 .question-p{
-  font-family: 'CircularStd-Book',sans-serif;
 
   padding-top: 2rem;
   font-size: 18px;
@@ -311,11 +301,8 @@ details{
 }
 
 summary{
-  /* background-color: white; */
   height: 60px;
   list-style: none;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
-  /* box-shadow: 11px 10px 38px rgba(0, 0, 0, 0.1); */
   display: flex;
   align-items: center;
   width: 100%;
@@ -344,7 +331,6 @@ summary{
   margin-bottom: 1rem;
   border-radius: 0.4rem;
   box-shadow: 11px 10px 38px rgba(0, 0, 0, 0.1);
-  font-family: 'CircularStd-Book',sans-serif;
   color: #555;
 
 }
@@ -393,8 +379,6 @@ summary{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Quicksand", sans-serif;
-  font-family: 'CircularStd-Book', sans-serif;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -433,6 +417,143 @@ summary{
   height: 25px;
   margin-right: 15px;
 }
+
+
+/* --------------Header */
+
+
+.header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 10rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+}
+
+.header-input{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-title{
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.header-title h3{
+  font-size: 28px;
+  margin-left: 0.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+.header-input input{
+  height: 46px;
+  border-radius: 35px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding-left: 1rem;
+  font-family: 'Fredoka', sans-serif;
+  flex-grow: 1;
+}
+
+.header-input button{
+  position: absolute;
+  right: 0;
+  
+  background-color: #0071DC;
+  border: none;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.header-icons{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-right: 2rem;
+
+}
+
+.header-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+ 
+  .cart-number {
+    background-color: #F39F19;
+    border-radius: 100%;
+    height: 20px; 
+    width: 20px;  
+    font-size: 12px;
+    color: white;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -12px;  
+    right: -12px;  
+}
+
+
+.nav{
+  height: 60px;
+  background-color: #E6EFFD;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.nav ul{
+  display: flex;
+  gap: 25px;
+  font-weight: 500;
+  margin-left: 2rem;
+  list-style-type: none;
+}
+
+.nav-info{
+  padding-right: 2rem;
+  gap: 25px;
+  display: flex;
+}
+
+.nav-info-item{
+  display: flex;
+  align-items: center;
+}
+
+.nav-info-item img{
+  margin-right: 0.7rem;
+}
+
+.nav-info div p{
+  font-weight: 400;
+  font-size: 14px;
+  color: #0071DC;
+}
+
+.nav-info div h4{
+  font-weight: 600;
+}
+
+
 
 
 @media (max-width: 1050px) {

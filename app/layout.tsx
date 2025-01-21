@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "./fonts";
-
-
+import { open_sans, fredoka, lexend_deca } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className}`}>
+      <body className={`${open_sans.className} ${fredoka.className} ${lexend_deca.className}`}>
         <main>
           {children}
         </main>
