@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="footer">
             <div className="footer-info">
                 <div className="circle-logotype">
-                    <Image src="/layout/bull-icon.png" alt="Logotipo" width={100} height={100}  />
+                    <Image src="/layout/white-bull.png" alt="Logotipo" width={100} height={100}  />
                 </div>
 
                 <div className="footer-section">

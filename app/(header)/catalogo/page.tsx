@@ -1,26 +1,16 @@
 import { bullCatalog } from "@/consts";
 import ProductCard from "@/app/ui/Product";
-import Link from "next/link";
+// import Link from "next/link";
 import styles from './page.module.css'
-import Image from "next/image";
 
 const CatalogPage = () => {
     return ( 
     
         
         <div className={styles['search-page-container']}>
-        <div className={styles['search-container']}>
-            <input
-                placeholder="Busca tus productos...."
-                type="text"
-            />
-            <div className={styles['search-img-container']}>
-                <Image src="/layout/search-grey-icon.png" width={25} height={25} alt="search icon" />
-            </div>
-         </div>
-
+      
         <div className={styles['search-products']}>
-            <div className={styles['search-filters']}>
+            {/* <div className={styles['search-filters']}>
                 <div className={styles['search-section']}>
                     <h3>Categorias</h3>
                     <Link href="/categorias/toros-mecanicos">Toros Mecánicos</Link>
@@ -66,7 +56,7 @@ const CatalogPage = () => {
                         <button>Aplicar</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className={styles['grid-products']}>
                 {bullCatalog.map((product) => (
