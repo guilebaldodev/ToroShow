@@ -153,10 +153,8 @@ display: flex;
   display: flex;
   flex-direction: column;
   min-height: 40vh;
-  /* font-family: "Noto Sans", sans-serif; */
   color: white;
   justify-content: space-between;
-  /* margin-top: 3rem; */
 }
 
 .footer-info{
@@ -191,6 +189,9 @@ display: flex;
 .footer-section h3{
   padding-bottom: 1rem;
   font-size: 20px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+
 }
 
 .footer-section ul li{
@@ -201,7 +202,7 @@ display: flex;
   margin-right: 10px;
 }
 
-.footer-section ul li a{
+.footer-section ul li a,.footer-section ul li p{
   text-decoration: none;
   color: inherit;
   margin-bottom: 12px;
@@ -248,14 +249,17 @@ display: flex;
 
 
 .terms-page-container{
-  width: 50%;
+  width: 60%;
   margin: auto;
-  padding-top: 5rem;
+  padding:  5rem 0;
 }
 
 .terms-page-container h2{
-  font-size: 26px;
+  font-size: 35px;
   padding-bottom: 4rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+
 }
 
 .terms-page-container h3{
@@ -267,6 +271,7 @@ display: flex;
   color: #333;
   padding-bottom: 3rem;
   line-height: 1.35;
+  font-size: 18px;
 
 }
 
@@ -276,12 +281,14 @@ display: flex;
 .questions-container{
   width: 70%;
   margin: auto;
-  padding-top: 5rem;
+  padding:  5rem 0 ;
 }
 
 .questions-container h2{
-  font-size: 37px;
-  text-align: center;
+  font-size: 35px;
+  /* text-align: center; */
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;  
 }
 
 .question-p{
@@ -350,7 +357,8 @@ summary{
 .accordion-plus{
   font-weight: 600;
   font-size: 28px;
-  color: #ee4545;
+  color: #016FDC;
+  padding-left: 1rem;
 }
 
 /* Layout */
@@ -424,10 +432,6 @@ summary{
 
 @media (max-width: 1050px) {
 
-  .footer-info{
-    /* justify-content: center; */
-  }
-  
   .circle-logotype{
     display: none;
   }
@@ -447,6 +451,13 @@ summary{
   .navbar-info-container{
     display: none;
   }
+
+  .terms-page-container h2,.questions-container h2{
+    font-size: 30px;
+  }
+  
+
+
 }
 
 
@@ -458,6 +469,37 @@ summary{
   .navbar-options,.navbar-icons{
     display: none;
   }
+
+  .terms-page-container{
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+  }
+
+  .terms-page-container h2{
+    padding-bottom: 2rem;
+    font-size: 25px;
+  }
+
+  .questions-container h2{
+    font-size: 25px;
+  }
+
+  .question-p,.terms-page-container p{
+    font-size: 16px;
+  }
+
+  .questions-container{
+    width: 80%;
+    padding-top: 2rem;
+  }
+
+  .title h3{
+    font-size: 18px;
+  }
+
+
+  
 
 }
 
@@ -480,6 +522,10 @@ summary{
 
   .footer-section ul li{
     overflow-wrap: anywhere;
+  }
+
+  .title h3{
+    font-size: 16px;
   }
 
 

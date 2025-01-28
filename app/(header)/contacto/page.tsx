@@ -5,7 +5,7 @@ const ContactPage = () => {
     return ( 
         <div className={styles['contact-container']}>
         <div className={styles['contact-banner']}>
-          <h3>Contacto</h3>
+          <h2>Contacto</h2>
         </div>
   
         <div className={styles['contact-info']}>
@@ -15,7 +15,7 @@ const ContactPage = () => {
             <div className={styles['contact-buttons']}>
               <button className={styles['green']}>
                 <Image src="/layout/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} />
-                33 4544 4579
+                7443112193
               </button>
               <button className={styles['red']}>
                 <Image src="/layout/phone-icon2.png" alt="Teléfono" width={32} height={32} />

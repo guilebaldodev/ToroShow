@@ -11,7 +11,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-section">
-                    <h3>Toro Show</h3>
+                    <h3>Toros Mx</h3>
                     <ul>
                         <li>
                             <Link href="/catalogo">Catologo</Link>
@@ -33,15 +33,15 @@ const Footer = () => {
                     <ul>
                         <li>
                             <Image src="/layout/facebook-icon.png" alt="Facebook" width={22} height={22} />
-                            <Link href="">toroshow</Link>
+                            <Link href="">torosmx</Link>
                         </li>
                         <li>
                             <Image src="/layout/instagram-icon.png" alt="Instagram" width={22} height={22} />
-                            <Link href="">toroshowinsta</Link>
+                            <Link href="">torosmxinsta</Link>
                         </li>
                         <li>
                             <Image src="/layout/whatsapp-icon.png" alt="WhatsApp" width={22} height={22} />
-                            <Link href="">337874654564</Link>
+                            <Link href="">7443112193</Link>
                         </li>
                     </ul>
                 </div>
@@ -51,22 +51,24 @@ const Footer = () => {
                     <ul>
                         <li>
                             <Image src="/layout/email-icon.png" alt="Email" width={22} height={22} />
-                            <Link href="">Ventadetorosmecanicos@gmail.com</Link>
+                            <p>torosmx@gmail.com</p>
                         </li>
                         <li>
                             <Image src="/layout/phone-icon.png" alt="Teléfono" width={22} height={22} />
-                            <Link href="">7443112196</Link>
+                            <p>7443112193</p>
                         </li>
                         <li>
                             <Image src="/layout/ubication-icon.png" alt="Ubicación" width={22} height={22} />
-                            <Link href="">Volcan Fuego #2278 Colli Urbano Zapopan Jal.</Link>
+                            <p>
+                            Acapulco Guerrero.
+                            </p>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div className="footer-developer">
-                Copyright ToroShow - 2024. Todos los derechos reservados.
+                Copyright TorosMx - 2024. Todos los derechos reservados.
             </div>
         </footer>  
     </> );

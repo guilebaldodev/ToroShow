@@ -1,9 +1,5 @@
 .hero-container{
-  /* height: 70vh;
-  background-image: url("./images/hero-images/hero-bull.webp");
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center; */
+
   width: 90%;
   margin: auto;
   display: flex;
@@ -35,7 +31,9 @@
 }
 
 .hero-texts h1{
-  font-size: 40px;
+  font-size: 45px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
 }
 
 .hero-texts h3{
@@ -109,14 +107,17 @@
 }
 
 .banner-texts h2{
-  font-size: 32px;
+  font-size: 28px;
   padding-bottom: 1.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+
 }
 
 .banner-texts p{
-  font-size: 19px;
+  font-size: 18px;
   line-height: 26px;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .banner-texts a{
@@ -239,7 +240,14 @@
   padding: 4rem 0 2rem;
   text-align: center;
  text-transform: capitalize;
+
 }
+
+.landing-products-title h3{
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
 
 .landing-products-container{
   width: 90%;
@@ -427,7 +435,7 @@
 
   .landing-products-container{
     grid-template-columns: repeat(1,1fr);
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
   }
 
   .landing-about-container{

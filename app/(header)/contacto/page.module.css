@@ -1,6 +1,11 @@
 
+.contact-container{
+  font-family: 'Lexend Deca', sans-serif;
+
+}
+
+
 .contact-banner{
-    font-family: 'CircularStd-Bold',sans-serif;
     height: 28vh;
     background-color: #338BF0;
     display: flex;
@@ -13,9 +18,11 @@
     z-index: 100;
   }
   
-  .contact-banner h3{
+  .contact-banner h2{
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
     color: #fff;
-    font-size: 36px;
+    font-size: 35px;
   }
   
   .contact-banner::before {
@@ -33,7 +40,6 @@
     width: 85%;
     margin: auto;
     padding:4rem 0;
-    font-family: 'CircularStd-Bold',sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
@@ -79,7 +85,6 @@
   
   
   .contact-us{
-    font-family: 'CircularStd-Book',sans-serif;
     color: #555;
     font-size: 18px;
     padding-top:0.8rem;
@@ -111,7 +116,8 @@
     border: 1px solid #cccccc;
     padding:10px;
     border-radius: 4px;
-    font-family: 'CircularStd-Book',sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+
   }
   
   .contact-form-input input:focus{
@@ -142,7 +148,8 @@
     width: 100%;
     font-weight: 500;
     border-radius: 5px;
-    font-family: 'CircularStd-Book',sans-serif;
+    font-family: 'Fredoka', sans-serif;
+
     font-size: 16px;
   }
   

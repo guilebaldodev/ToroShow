@@ -2,39 +2,38 @@ import AccordionItem from "@/app/ui/AccordionItem";
 
 const faqData = [
   {
-    question: '¿Cómo puedo realizar una compra?',
-    answer: 'Para realizar una compra, navega por nuestro sitio web, selecciona los productos que deseas adquirir y agrégales al carrito. Luego, dirígete al carrito, revisa tu pedido y procede al pago siguiendo las instrucciones en pantalla.',
+    question: '¿Cómo puedo comprar un toro mecánico en Toros Mx?',
+    answer: 'Para comprar un toro mecánico, selecciona el modelo que más te guste y agrégalo al carrito de compras. Una vez en el carrito, serás trasladado a un chat de WhatsApp donde podremos coordinar los detalles de tu pedido, incluyendo el envío y la forma de pago.',
   },
   {
-    question: '¿Cuáles son los métodos de pago aceptados?',
-    answer: 'Aceptamos varios métodos de pago, incluyendo tarjetas de crédito y débito, PayPal y transferencias bancarias. Durante el proceso de pago, podrás seleccionar el método que prefieras.',
+    question: '¿Qué métodos de pago aceptan?',
+    answer: 'En Toros Mx aceptamos tarjetas de crédito y débito, transferencias bancarias y pagos a través de PayPal. Durante el proceso de compra, podrás elegir la opción que mejor te convenga.',
   },
   {
-    question: '¿Cómo puedo rastrear mi pedido?',
-    answer: 'Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con un número de seguimiento y un enlace para rastrear el estado de tu envío en tiempo real.',
+    question: '¿Realizan envíos a todo México?',
+    answer: 'Sí, enviamos nuestros toros mecánicos a cualquier parte de México. Durante el proceso de compra, podrás ingresar tu dirección y ver los costos de envío aplicables.',
   },
   {
-    question: '¿Cuál es el tiempo estimado de entrega?',
-    answer: 'El tiempo de entrega varía según tu ubicación y el tipo de envío seleccionado. Generalmente, los pedidos se entregan en un plazo de 3 a 7 días hábiles. Puedes consultar los tiempos específicos en nuestra página de envíos.',
+    question: '¿Cuánto tiempo tarda en llegar mi pedido?',
+    answer: 'El tiempo de entrega varía según tu ubicación, pero generalmente tardamos entre 5 y 10 días hábiles en hacer llegar tu toro mecánico.',
   },
   {
-    question: '¿Cómo puedo devolver un producto?',
-    answer: 'Para devolver un producto, sigue nuestro proceso de devoluciones en el sitio web. Debes solicitar la devolución dentro del plazo establecido y asegurarte de que el producto esté en su estado original. Encontrarás más detalles en nuestra política de devoluciones.',
+    question: '¿Puedo devolver un toro mecánico si no estoy satisfecho?',
+    answer: 'No aceptamos devoluciones. Antes de realizar tu compra, te recomendamos asegurarte de que el modelo seleccionado cumple con tus necesidades.',
   },
   {
-    question: '¿Puedo modificar o cancelar mi pedido después de haberlo realizado?',
-    answer: 'Si necesitas modificar o cancelar tu pedido, contáctanos lo antes posible. Podremos hacer cambios siempre que el pedido no haya sido procesado o enviado aún. Revisa nuestra política de cambios y cancelaciones para más detalles.',
+    question: '¿Cómo puedo comunicarme con Toros Mx?',
+    answer: 'Puedes contactarnos a través de nuestro formulario de contacto en el sitio web, enviando un correo electrónico a soporte@torosmx.com o llamándonos directamente. Estaremos encantados de ayudarte.',
   },
   {
-    question: '¿Cómo puedo contactar con el servicio de atención al cliente?',
-    answer: 'Puedes contactar con nuestro servicio de atención al cliente a través de nuestro formulario de contacto en el sitio web, enviando un correo electrónico a soporte@ecommerce.com o llamando a nuestro número de atención al cliente.',
+    question: '¿Los toros mecánicos incluyen garantía?',
+    answer: 'Sí, nuestros toros mecánicos incluyen una garantía limitada que cubre defectos de fabricación. Para más detalles, consulta nuestra página de términos y condiciones.',
   },
   {
-    question: '¿Ofrecen envíos internacionales?',
-    answer: 'Sí, ofrecemos envíos internacionales. Durante el proceso de compra, podrás seleccionar tu país de destino y ver las opciones de envío disponibles. Los gastos de envío y los tiempos de entrega variarán según la ubicación.',
+    question: '¿Puedo personalizar mi toro mecánico?',
+    answer: 'Sí, ofrecemos opciones de personalización para que tu toro mecánico se adapte a tus necesidades. Contáctanos para más información sobre colores, diseños y características adicionales.',
   },
 ];
-
 
 const QuestionPage = () => {
 

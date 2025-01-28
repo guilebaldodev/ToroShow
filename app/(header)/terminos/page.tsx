@@ -7,7 +7,7 @@ const TermsPage = () => {
         <h2>TÉRMINOS Y CONDICIONES</h2>
         <h3>INFORMACIÓN GENERAL</h3>
 <p>
-Este sitio web es administrado por ToroShow. A lo largo del sitio, los términos “nosotros”, “nos” y “nuestro” hacen referencia a ToroShow. ToroShow te ofrece este sitio web, junto con toda la información, herramientas y servicios disponibles, siempre y cuando aceptes todos los términos, condiciones, políticas y avisos aquí establecidos.
+Este sitio web es administrado por Toros Mx. A lo largo del sitio, los términos “nosotros”, “nos” y “nuestro” hacen referencia a Toros Mx. Toros Mx te ofrece este sitio web, junto con toda la información, herramientas y servicios disponibles, siempre y cuando aceptes todos los términos, condiciones, políticas y avisos aquí establecidos.
 <br />
 Al navegar por nuestro sitio y/o realizar una compra, estás participando en nuestro “Servicio” y aceptas los siguientes términos y condiciones (“Condiciones del Servicio”, “Términos”), incluyendo todos los términos adicionales y políticas mencionadas en este documento y/o disponibles a través de enlaces.
 <br />
