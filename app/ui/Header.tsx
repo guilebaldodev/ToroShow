@@ -3,11 +3,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "@/app/ui/MobileNav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./css/header.module.css";
+import Cart from "@/app/ui/Cart";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (cartIsOpen) {
+      document.body.style.overflow = "hidden"; 
+    } else {
+      document.body.style.overflow = "auto"; 
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [cartIsOpen]);
+
+
 
   return (
     <>
@@ -18,6 +34,15 @@ const Header = () => {
           }}
         />
       )}
+
+      {cartIsOpen && (
+        <Cart 
+          onClose={()=>{
+            setCartIsOpen(false)
+            }}>
+        </Cart>
+      )}
+
 
       <div className={styles["header"]}>
         <div
@@ -69,6 +94,9 @@ const Header = () => {
           </div>
           <div className={styles["header-icon"]}>
             <Image
+            onClick={()=>{
+              setCartIsOpen(true)
+            }}
               src={"/layout/cart.png"}
               width={30}
               height={30}

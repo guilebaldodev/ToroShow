@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import style from "./css/header.module.css"; // Asegúrate de importar tus estilos
+import style from "./css/header.module.css"; 
 
 const MobileMenu = ({ onClose }) => {
   const message = encodeURIComponent(
@@ -11,7 +11,6 @@ const MobileMenu = ({ onClose }) => {
 
   return (
     <div className={`${style["mobile-menu"]} ${style["slide-enter"]}`}>
-      {/* Encabezado del menú */}
       <div className={style["menu-header"]}>
         <div className={style["menu-header-left"]}>
           <Image
@@ -32,7 +31,6 @@ const MobileMenu = ({ onClose }) => {
         />
       </div>
 
-      {/* Opciones del menú */}
       <div className={style["menu-options"]}>
         <div className={style["menu-item"]}>
           <Link href="/catalogo" onClick={onClose}>
@@ -51,7 +49,6 @@ const MobileMenu = ({ onClose }) => {
         </div>
       </div>
 
-      {/* Enlace a WhatsApp */}
       <Link
         href={whatsAppURL}
         target="_blank"

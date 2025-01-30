@@ -2,10 +2,18 @@
 
 import Image from 'next/image';
 
-const AdminHeader = () => {
+interface AdminHeaderProps{
+  isSideBarActive:boolean,
+  toggleSideBar:()=>void
+}
+
+const AdminHeader = ({isSideBarActive,toggleSideBar}:AdminHeaderProps) => {
   return (
     <nav className="admin-nav">
-      <Image src="/layout/admin/hamburger.png" alt="Menu Icon" width={24} height={24} />
+      <Image onClick={()=>{
+        toggleSideBar()
+        console.log(isSideBarActive)
+      }} src="/layout/admin/hamburger.png" alt="Menu Icon" width={24} height={24} />
 
       <div className="admin-nav-right">
         <Image src="/layout/admin/full-screen.png" alt="Full Screen Icon" width={24} height={24} />

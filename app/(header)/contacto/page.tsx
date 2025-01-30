@@ -68,14 +68,14 @@ const ContactPage = () => {
               Dirección:
               </strong>
               <br />
-              Av. 18 de marzo 1584 Col. Las Águilas Zapopan Jalisco, México
+              Acapulco, Guerrero, México
               <br />
               <br />
               <strong>
               Correo de contacto:
               </strong>
               <br />
-              toroshow@gmail.com
+              torosmx@gmail.com
             </p>
           </div>
         </div>

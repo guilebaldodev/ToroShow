@@ -5,20 +5,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './css/SideBar.module.css'
 
-const SideBar = () => {
+interface AdminHeaderProps{
+  isSideBarActive:boolean,
+  setIsSideBarActive:(value:boolean)=>void,
+}
+
+const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
+  
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   const toggleMenu = (menu: string) => {
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
+
+  console.log(isSideBarActive,"iss")
+
   return (
-    <div className={styles['sidebar-container']}>
+<div className={`${styles['sidebar-container']} ${isSideBarActive ? styles['close'] : ''} ${styles["slide-enter"]}`}>
       <div className={styles['sidebar-top']}>
         <div className={styles['sidebar-header']}>
           <div className={styles['sidebar-title']}>
             <Image src="/layout/admin/black-logo.png" alt="Logo" width={32} height={32} />
-            <h3>ToroShow</h3>
+            <h3>Toros Mx</h3>
           </div>
         </div>
 
@@ -54,7 +63,7 @@ const SideBar = () => {
                 <p>Lista</p>
               </Link>
 
-              <Link href="/panel-de-control/añadir-producto" className={styles['sidebar-link']}>
+              <Link href="/panel-de-control/anadir-producto" className={styles['sidebar-link']}>
                 <Image src="/layout/admin/circle.png" alt="Añadir Producto Icon" width={12} height={12} />
                 <p>Añadir</p>
               </Link>
