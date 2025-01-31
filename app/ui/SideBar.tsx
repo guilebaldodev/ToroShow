@@ -7,10 +7,10 @@ import styles from './css/SideBar.module.css'
 
 interface AdminHeaderProps{
   isSideBarActive:boolean,
-  setIsSideBarActive:(value:boolean)=>void,
+  toggleSideBar:()=>void
 }
 
-const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
+const SideBar = ({toggleSideBar,isSideBarActive}:AdminHeaderProps) => {
   
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
@@ -19,9 +19,16 @@ const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
   };
 
 
-  console.log(isSideBarActive,"iss")
 
   return (
+    
+    <>
+  {(!isSideBarActive) && (<>
+    <div className={styles["overlay"]}>
+
+    </div>
+  </>)}
+
 <div className={`${styles['sidebar-container']} ${isSideBarActive ? styles['close'] : ''} ${styles["slide-enter"]}`}>
       <div className={styles['sidebar-top']}>
         <div className={styles['sidebar-header']}>
@@ -29,10 +36,25 @@ const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
             <Image src="/layout/admin/black-logo.png" alt="Logo" width={32} height={32} />
             <h3>Toros Mx</h3>
           </div>
+
+              <Image
+                    onClick={() => {
+                      toggleSideBar()
+                    }}
+                    alt="x icon"
+                    width={25}
+                    height={25}
+                    src="/admin/x.png"
+                  />
+
         </div>
 
         <div className={styles['sidebar-options']}>
-          <Link href="/panel-de-control/estadisticas" className={styles['sidebar-link']}>
+          <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/estadisticas" className={styles['sidebar-link']}>
             <Image src="/layout/admin/panel.png" alt="Panel Icon" width={24} height={24} />
             <p>Panel</p>
           </Link>
@@ -43,7 +65,7 @@ const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
                 activeMenu === 'productos' ? `${styles['active']} ${styles['option-menu-selected']}` : ''
               }`}
               onClick={() => toggleMenu('productos')}
-            >
+              >
               <div className={styles['title-right']}>
                 <Image src="/layout/admin/tag.png" alt="Productos Icon" width={24} height={24} />
                 <p>Productos</p>
@@ -54,28 +76,44 @@ const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
                 alt="Toggle Icon"
                 width={18}
                 height={18}
-              />
+                />
             </div>
 
             <div className={`${styles['content']} ${activeMenu === 'productos' ? styles['show'] : ''}`}>
-              <Link href="/panel-de-control/productos" className={styles['sidebar-link']}>
+              <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/productos" className={styles['sidebar-link']}>
                 <Image src="/layout/admin/circle.png" alt="Lista Icon" width={12} height={12} />
                 <p>Lista</p>
               </Link>
 
-              <Link href="/panel-de-control/anadir-producto" className={styles['sidebar-link']}>
+              <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/anadir-producto" className={styles['sidebar-link']}>
                 <Image src="/layout/admin/circle.png" alt="Añadir Producto Icon" width={12} height={12} />
                 <p>Añadir</p>
               </Link>
             </div>
           </div>
 
-          <Link href="/panel-de-control/ventas" className={styles['sidebar-link']}>
+          <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/ventas" className={styles['sidebar-link']}>
             <Image src="/layout/admin/delivery.png" alt="Ventas Icon" width={24} height={24} />
             <p>Ventas</p>
           </Link>
 
-          <Link href="/panel-de-control/categorias" className={styles['sidebar-link']}>
+          <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/categorias" className={styles['sidebar-link']}>
             <Image src="/layout/admin/category.png" alt="Categorias Icon" width={24} height={24} />
             <p>Categorias</p>
           </Link>
@@ -83,17 +121,38 @@ const SideBar = ({setIsSideBarActive,isSideBarActive}:AdminHeaderProps) => {
       </div>
 
       <div className={styles['sidebar-footer']}>
-        <Link href="/panel-de-control/cuenta" className={styles['sidebar-link']}>
+      <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/" className={styles['sidebar-link']}>
+          <Image src="/admin/shop.png" alt="icono de tienda" width={24} height={24} />
+          <p>Ir a la tienda</p>
+        </Link>
+        
+        
+        <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/cuenta" className={styles['sidebar-link']}>
           <Image src="/layout/admin/config.png" alt="Cuenta Icon" width={24} height={24} />
           <p>Cuenta</p>
         </Link>
 
-        <Link href="/panel-de-control/preguntas" className={styles['sidebar-link']}>
+
+
+        <Link onClick={()=>{
+            if((!isSideBarActive) && (window.innerWidth < 750)){
+              toggleSideBar()
+            }
+          }} href="/panel-de-control/preguntas" className={styles['sidebar-link']}>
           <Image src="/layout/admin/sign-out.png" alt="Cerrar sesión Icon" width={24} height={24} />
           <p>Cerrar sesión</p>
         </Link>
       </div>
     </div>
+                </>
   );
 };
 

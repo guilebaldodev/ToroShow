@@ -130,7 +130,7 @@
 
 .admin-table{
     padding: 1rem;
-
+    overflow-x: auto;
 
 }
 
@@ -188,7 +188,7 @@
 .admin-table-footer{
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding: 1rem;
     color: #212529;
     align-items: center;
 }
@@ -234,11 +234,15 @@
 .admin-footer-right{
     display: flex;
     align-items: center;
+    padding-left: 1rem;
+
 }
 
 .admin-footer-right p{
     margin-right:0.5rem;
 }
+
+
 
 
 .color-td span{
@@ -293,11 +297,12 @@
     text-align: center !important;
 }
 
-.td-actions{
-
-    /* display: flex;
-    justify-content: center !important; */
+.td-actions div{
     text-align: center;
+    display: flex;
+    align-items: center !important;
+    height: 100% !important;
+    justify-content: center;
 }
 
 .td-actions img{
@@ -359,6 +364,10 @@
     display: none;
 }
 
+
+.footer-actions{
+    display: flex;
+}
 
 
 /* Admin Account */
@@ -559,7 +568,6 @@
   }
   
   .form_buttons button{
-    font-family: 'Inter', 'Inter Fallback';
     padding: 8px 16px;
     height: 38px;
     border: none;
@@ -588,6 +596,7 @@
   .upload_file h4{
     font-weight: 500;
     font-size: 15px;
+    text-align: center;
   }
   
   .upload_items{
@@ -627,4 +636,123 @@
     word-break: break-all;
     margin-bottom: 0.2rem;
   }
+
+  @media (max-width:1050px){
+
+    .form_container{
+        flex-direction: column;
+    }
+
+    .left_form,.right_form{
+        width: 100%;
+        padding: 1rem;
+    }
+
+}
+  
+  
+
+
+
+
+  @media (max-width:950px){
+
+  }
+  
+  @media (max-width:500px){
+    .admin-table-footer{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .admin-footer-right{
+        padding: 0;
+        padding-top: 1rem;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+ 
+
+    .admin-table-header{
+        flex-direction: column-reverse ;
+    }
+
+    .admin-table-left{
+        padding-top: 1rem;
+    }
+
+    .admin-table-left button{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .admin-table-right .input-container{
+        flex: 1;
+    }
+}
+
+@media (max-width: 750px){
+    .admin-products-container,.admin-account,.add_product_container{
+        padding: 1rem;
+    }
+
+    
+    
+}
+
+
+@media (max-width:450px){
+    .admin-products-titles{
+        flex-direction: column;
+    }
+
+    .admin-route{
+        padding-top: 1rem;
+    }
+
+    .admin-table-container{
+        margin-top: 1rem;
+    }
+
+    .double_input {
+        flex-direction: column;
+        /* width: 100%; */
+    }
+
+    .input_duo input,.input_duo{
+        width: 100% !important;
+    }
+
+    .admin-account-section{
+        flex-direction: column;
+    }
+
+    
+    
+    .admin-section-texts,.admin-section-inputs{
+        width: 100%;
+    }
+
+    
+
+}
+  
+
+
+@media (max-width:600px){
+ 
+    .admin-account-section{
+        flex-direction: column;
+    }
+    
+    .admin-section-texts,.admin-section-inputs{
+        width: 100%;
+    }    
+
+}
+  
+  
   

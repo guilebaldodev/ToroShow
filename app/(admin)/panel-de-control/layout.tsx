@@ -15,7 +15,7 @@ export default function AdminLayout({
   const [isSideBarActive, setIsSideBarActive] = useState(true);
 
   useEffect(() => {
-    setIsSideBarActive(!(window.innerWidth >= 800));
+    setIsSideBarActive(!(window.innerWidth >= 900));
   }, []);
 
 
@@ -29,7 +29,8 @@ export default function AdminLayout({
         
         <>
             <div className="layout">
-                <SideBar isSideBarActive={isSideBarActive} setIsSideBarActive={setIsSideBarActive}></SideBar>
+
+                <SideBar toggleSideBar={changeSideBar} isSideBarActive={isSideBarActive} ></SideBar>
                 <div className="dashboard-content">
                 <AdminHeader toggleSideBar={changeSideBar} isSideBarActive={isSideBarActive}></AdminHeader>
                 {children}

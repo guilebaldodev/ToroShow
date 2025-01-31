@@ -79,6 +79,8 @@ const AdminSales = () => {
                     <td className={styles['td-center']}>${bull.precio}</td>
                     <td className={styles['td-center']}>{bull.fecha}</td>
                     <td className={styles['td-actions']}>
+                      <div>
+
                       <Link href="">
                         <Image src="/admin/edit.png" alt="Edit Icon" width={24} height={24} />
                       </Link>
@@ -88,13 +90,17 @@ const AdminSales = () => {
                       <Link href="">
                         <Image src="/admin/delete.png" alt="Delete Icon" width={24} height={24} />
                       </Link>
+                      </div>
                     </td>
                   </tr>
                 ))}
             </tbody>
           </table>
 
-          <div className={styles['admin-table-footer']}>
+      
+        </div>
+
+        <div className={styles['admin-table-footer']}>
             <div className={styles['admin-footer-left']}>
               <p>Ventas por página: 10</p>
             </div>
@@ -104,15 +110,19 @@ const AdminSales = () => {
                 <input type="number" />
                 <p>de 1</p>
               </div>
+
+              <div className={styles["footer-actions"]}>
+
               <div className={`${styles['footer-button']} ${styles['rotate']}`}>
                 <Image src="/admin/arrow.png" alt="Anterior" width={15} height={15} />
               </div>
               <div className={styles['footer-button']}>
                 <Image src="/admin/arrow.png" alt="Siguiente" width={15} height={15} />
               </div>
+                </div>
             </div>
           </div>
-        </div>
+
       </div>
     </div>
                     </>

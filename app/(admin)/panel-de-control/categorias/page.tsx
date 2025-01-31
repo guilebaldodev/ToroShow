@@ -92,6 +92,8 @@ const AdminCategories = () => {
                       <td>{categorie.nombre}</td>
                       <td className={styles['td-center']}>{categorie.productos}</td>
                       <td className={styles['td-actions']}>
+                        <div>
+
                         <Link href="">
                             <Image
                               src="/admin/edit.png"
@@ -106,15 +108,19 @@ const AdminCategories = () => {
                               alt="delete icon"
                               width={25}
                               height={25}
-                            />
+                              />
                         </Link>
+                              </div>
                       </td>
                     </tr>
                   ))}
               </tbody>
             </table>
 
-            <div className={styles['admin-table-footer']}>
+
+          </div>
+
+          <div className={styles['admin-table-footer']}>
               <div className={styles['admin-footer-left']}>
                 <p>Categorias por página: 10</p>
               </div>
@@ -124,13 +130,18 @@ const AdminCategories = () => {
                   <input type="number" />
                   <p>de 1</p>
                 </div>
+
+                <div className={styles["footer-actions"]}>
+
+
+
                 <div className={`${styles['footer-button']} ${styles['rotate']}`}>
                   <Image
                     src="/admin/arrow.png"
                     alt="Anterior"
                     width={15}
                     height={15}
-                  />
+                    />
                 </div>
                 <div className={styles['footer-button']}>
                   <Image
@@ -138,11 +149,14 @@ const AdminCategories = () => {
                     alt="Siguiente"
                     width={15}
                     height={15}
-                  />
+                    />
                 </div>
+
+                  </div>
+
               </div>
             </div>
-          </div>
+
         </div>
       </div>
     </>

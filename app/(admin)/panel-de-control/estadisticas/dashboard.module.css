@@ -1,5 +1,6 @@
 .dashboard-container{
     padding: 1rem;
+
 }
 
 .dashboard-header{
@@ -69,6 +70,7 @@
 .dashboard-items{
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .dashboard-sales-bars{
@@ -120,4 +122,24 @@
 
 .sales-category{
     padding-top: 1rem;
+}
+
+@media (max-width: 950px) {
+
+    .dashboard-sales-radar,.dashboard-sales-category{
+        min-width: 100%;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .dashboard-container{
+        padding: 0;
+    }
+
+    .dashboard-header{
+        gap: 1rem;
+    }
+
 }
