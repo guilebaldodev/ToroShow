@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from '../admin.module.css'
 import { BullCategories } from "@/consts";
+import QuillComponent from "@/app/ui/QuillComponent";
 
 const AddProduct = () => {
 
@@ -42,6 +43,8 @@ const AddProduct = () => {
                 <div className={styles.input_duo}>
                   <label htmlFor="">Descripcion del producto</label>
                   <textarea placeholder="Escribe una descripcion del producto" id=""></textarea>
+
+
                 </div>
 
                 <div className={styles.double_input}>

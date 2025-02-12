@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './product.module.css'
+import Gallery from '@/app/ui/SwiperGallery'
 
 const ProductDetailPage = () => {
  
@@ -9,13 +10,17 @@ const ProductDetailPage = () => {
       <div className={styles['product-detail-container']}>
         <div className={styles['product-detail']}>
           <div className={styles['product-detail-img']}>
-            <Image
+            {/* <Image
               src="/products/bulls/product-1.webp"
               alt="Imagen del producto"
               width={300}
               height={300}
               style={{width:"100%",borderRadius:"5px",maxWidth:"500px",height:"auto"}}
-            />
+            /> */}
+
+              <Gallery></Gallery>
+
+
           </div>
 
           <div className={styles['product-detail-info']}>

@@ -2,7 +2,7 @@
 .product-detail-container{
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 80%;
     margin: auto;
     min-height: 50vh;
   }
@@ -32,11 +32,9 @@
   
   
   .product-detail-info {
-    font-family: 'CircularStd-Book',sans-serif;
   }
   
   .product-detail-info h2{
-    font-family: 'CircularStd-Bold',sans-serif;
     font-size: 28px;
     letter-spacing: 0.5px;
   }
@@ -49,7 +47,6 @@
   .product-main-prices{
     display: flex;
     align-items: center;
-    font-family: 'CircularStd-Bold',sans-serif;
     font-size: 23px;
   }
   
@@ -83,7 +80,6 @@
     background-color:black;
     color: white;
     font-size: 16px;
-    font-family: 'CircularStd-Bold',sans-serif;
    
   }
   
@@ -142,5 +138,62 @@
   
   .product-detail-include ul li{
     padding: 5px 0;
+  }
+
+
+  @media (max-width:1200px){
+
+    .product-detail-container{
+      width: 90%;
+    }
+  
+  
+  }
+
+  @media (max-width:1000px){
+
+    .product-detail-container{
+      width: 95%;
+    }
+  
+  
+  }
+  
+
+  
+  @media (max-width:850px){
+
+    .product-detail-container{
+      width: 95%;
+    }
+  
+    .product-detail{
+      flex-direction: column;
+    }
+
+
+    .product-detail-img{
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .product-detail-img img{
+      width: 100%;
+    }
+
+    .product-detail-info{
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .product-detail-info h2{
+      font-size: 24px;
+    }
+
+    .product-detail-include ul{
+      padding-left: 1rem;
+    }
+
+  
   }
   
