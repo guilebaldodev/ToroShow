@@ -1,4 +1,6 @@
 "use client";
+
+
 import styles from "./product.module.css";
 import Gallery from "@/app/ui/SwiperGallery";
 import { useParams } from "next/navigation";
