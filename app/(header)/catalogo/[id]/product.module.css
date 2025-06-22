@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 80%;
     margin: auto;
+    padding-bottom: 2rem;
     min-height: 50vh;
   }
   
@@ -90,6 +91,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    cursor: pointer;
   }
   
   .product-detail-button  img{
@@ -104,43 +106,12 @@
   }
   
   .product-details-detail{
-    padding-top: 1rem;
     font-size: 17px;
     color: #1b1b1b !important;
-  }
-  
-  .product-detail-property{
     padding-top: 1rem;
+    padding-bottom: 2rem;
   }
   
-  .product-detail-property h4{
-    padding-bottom: 0.5rem;
-    color: black;
-  
-  }
-  
-  .product-detail-description{
-    padding-top: 1rem;
-  }
-  
-  .product-detail-description h4{
-    padding-bottom: 0.5rem;
-    color: black;
-  
-  }
-  
-  .product-detail-include h4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: black;
-  
-  }
-  
-  .product-detail-include ul li{
-    padding: 5px 0;
-  }
-
-
   @media (max-width:1200px){
 
     .product-detail-container{
@@ -196,4 +167,33 @@
 
   
   }
+
+  @media (max-width:500px){
+
+    .product-detail-buttons{
+      flex-direction: column;
+    }
+
+    .product-detail-button{
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+
+    .product-button-whatsapp{
+      margin-left: 0rem;
+    }
   
+  
+  }
+  
+
+  @media (max-width:400px){
+
+    .product-detail-container{
+      width: 95%;
+    }
+
+  
+  
+  }

@@ -1,44 +1,98 @@
+"use client";
+
+import { useState } from "react";
 import { bullCatalog } from "@/consts";
 import ProductCard from "@/app/ui/Product";
-// import Link from "next/link";
-import styles from './page.module.css'
-import Filters from "@/app/ui/Filters";
-import Select from "react-select/base";
-import Image from "next/image";
+import styles from "./page.module.css";
+import Select from "react-select";
+import { useSearchParams } from "next/navigation";
+
+const categoryOptions = [
+  { value: "Toro Mecanico", label: "Toro Mecánico" },
+  { value: "Refacciones", label: "Refacciones" },
+  { value: "Inflables", label: "Inflables" },
+  { value: "Accesorios", label: "Accesorios" },
+];
 
 const CatalogPage = () => {
 
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get("busqueda")?.toLowerCase() || "";
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-    return ( 
-    
-        <div className={styles["search-container"]}>
-        <div className={styles['search-page-container']}>
-            <div className={styles['search-products']}>
-                <Filters></Filters>
-                <div className={styles["search-products-container"]}>
-                    <div className={styles["search-page-title"]}>
-                        <h3>Resultados para : Toro Mecanico deluxe</h3>
-                        <div className={styles["search-page-utils"]}>
-                            <button>
-                                <Image src={"/layout/white-filter.png"} width={23} height={23} alt="icono de filtros"></Image>
-                                <span>Filtros</span>
-                            </button>
-                            <select name="" id="">
-                                <option value="ss">Ordenar por</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div className={styles['grid-products']}>
-                        {bullCatalog.map((product) => (
-                            <ProductCard key={product.titulo} product={product} />
-                        ))}
-                    </div>
-                </div>
+  const filteredCatalog = bullCatalog.filter((product) => {
+    const matchesCategory = selectedCategory
+      ? product.categoria === selectedCategory
+      : true;
+
+    const matchesSearch = product.titulo.toLowerCase().includes(searchQuery);
+
+    return matchesCategory && matchesSearch;
+  });
+
+
+
+  return (
+
+    <>
+    <div className={styles["search-containerr"]}>
+
+
+      <div className={styles["search-page-container"]}>
+        <div className={styles["search-products"]}>
+          <div className={styles["search-products-container"]}>
+            <div className={styles["search-page-title"]}>
+              <h3>
+
+                {searchQuery?
+                <>
+                  Resultados para {searchQuery}
+                </>
+                :
+                <>
+                  Todos los productos
+                </>
+                
+                }
+
+              </h3>
             </div>
+
+      <div
+        style={{
+          paddingBottom: "1rem",
+          display: "flex",
+          gap: "10px",
+          marginTop: "10px",
+          flexWrap: "wrap",
+        }}
+      >
+                  <Select
+                                  isClearable
+                placeholder="Filtrar por categoría"
+                options={categoryOptions}
+                onChange={(option) => setSelectedCategory(option?.value ?? null)}
+        />
+  
+      </div>
+
+
+            <div className={styles["grid-products"]}>
+              {filteredCatalog.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+
+     
     </div>
-    
-    );
-}
- 
+
+
+
+          </>
+  );
+};
+
 export default CatalogPage;

@@ -1,13 +1,41 @@
-import { bullCatalog } from "@/consts";
+import { useCartStore } from "@/store/cartStore";
 import Image from "next/image";
 import React from "react";
-import styles from './css/cart.module.css'
+import styles from "./css/cart.module.css";
 
 const Cart = ({ onClose }) => {
-
   const formatPrice = (price) => {
-    return price.toLocaleString('en-US', { minimumFractionDigits: 0 });
-};
+    return price.toLocaleString("en-US", { minimumFractionDigits: 0 });
+  };
+
+  const sendItems = () => {
+    if (cartItems.length === 0) return;
+
+    const lineas = cartItems.map(
+      (item) =>
+        `${item.titulo}\nCantidad: ${
+          item.cantidad
+        }\nPrecio unitario: $${formatPrice(
+          item.precio
+        )}\nSubtotal: $${formatPrice(item.precio * item.cantidad)}\n`
+    );
+
+    const totalLine = `\n*TOTAL: $${formatPrice(total)}*`; 
+
+    const mensaje = encodeURIComponent(
+      `Hola, quiero comprar los siguientes productos:\n\n${lineas.join(
+        "\n"
+      )}${totalLine}`
+    );
+
+    const url = `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${mensaje}`; 
+    window.open(url, "_blank");
+  };
+
+  const cartItems = useCartStore((state) => state.items);
+  const updateQuantity = useCartStore((state) => state.updateQuantity);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const total = useCartStore((state) => state.getTotal());
 
   return (
     <>
@@ -25,16 +53,16 @@ const Cart = ({ onClose }) => {
           </div>
 
           <div className={styles["cart-items"]}>
-            {bullCatalog.slice(0, 6).map((product, index) => (
+            {cartItems.map((product, index) => (
               <div key={index} className={styles["cart-item"]}>
                 <div className={styles["cart-item-info"]}>
                   <Image
-                    src={`/products/bulls/${product.img}`}
+                    src={product.img[0]}
                     width={80}
                     height={80}
                     alt="product"
                   />
-                  
+
                   <div className={styles["cart-item-right"]}>
                     <div className={styles["cart-item-details"]}>
                       <p>Toro Mecanico</p>
@@ -43,6 +71,9 @@ const Cart = ({ onClose }) => {
                     </div>
 
                     <Image
+                      onClick={() => {
+                        removeFromCart(product.id);
+                      }}
                       className={styles["delete-icon"]}
                       src={"/layout/delete-icon.png"}
                       width={30}
@@ -54,9 +85,21 @@ const Cart = ({ onClose }) => {
 
                 <div className={styles["cart-item-actions"]}>
                   <div className={styles["cart-item-quantity"]}>
-                    <button>-</button>
-                    <button>1</button>
-                    <button>+</button>
+                    <button
+                      onClick={() => {
+                        updateQuantity(product.id, -1);
+                      }}
+                    >
+                      -
+                    </button>
+                    <button>{product.cantidad}</button>
+                    <button
+                      onClick={() => {
+                        updateQuantity(product.id, 1);
+                      }}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
@@ -66,12 +109,12 @@ const Cart = ({ onClose }) => {
           <div className={styles["cart-footer"]}>
             <div className={styles["cart-footer-total"]}>
               <span>Total</span>
-              <span>$545,750</span>
+              <span>${formatPrice(total)}</span>
             </div>
 
             <p>Serás redirigido a WhatsApp para concluir la compra</p>
 
-            <button>
+            <button onClick={sendItems}>
               <Image
                 src={"/layout/whatsapp-icon.png"}
                 width={25}

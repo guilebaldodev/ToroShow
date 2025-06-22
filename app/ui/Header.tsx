@@ -1,21 +1,28 @@
 "use client";
 
+import { useCartStore } from "@/store/cartStore";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "@/app/ui/MobileNav";
 import { useEffect, useState } from "react";
 import styles from "./css/header.module.css";
 import Cart from "@/app/ui/Cart";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const router = useRouter();
+
+
+  const total=useCartStore((state)=>state.getTotalItems())
 
   useEffect(() => {
     if (cartIsOpen) {
-      document.body.style.overflow = "hidden"; 
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     }
 
     return () => {
@@ -23,7 +30,9 @@ const Header = () => {
     };
   }, [cartIsOpen]);
 
-
+  const handleSearch = () => {
+    router.push(`/catalogo?busqueda=${encodeURIComponent(search)}`);
+  };
 
   return (
     <>
@@ -36,13 +45,12 @@ const Header = () => {
       )}
 
       {cartIsOpen && (
-        <Cart 
-          onClose={()=>{
-            setCartIsOpen(false)
-            }}>
-        </Cart>
+        <Cart
+          onClose={() => {
+            setCartIsOpen(false);
+          }}
+        ></Cart>
       )}
-
 
       <div className={styles["header"]}>
         <div
@@ -60,20 +68,23 @@ const Header = () => {
         </div>
 
         <div className={styles["header-title"]}>
-          <Image
-            src={"/layout/icon.png"}
-            width={45}
-            height={45}
-            alt="logo"
-          />
+          <Image src={"/layout/icon.png"} width={45} height={45} alt="logo" />
           <h3>
             <Link href={"/"}>TOROS MX</Link>
           </h3>
         </div>
 
         <div className={styles["header-input"]}>
-          <input placeholder="Buscar productos..." type="text" />
-          <button>
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleSearch();
+            }}
+            placeholder="Buscar productos..."
+            type="text"
+          />
+          <button onClick={handleSearch}>
             <Image
               alt="Icono de buscar"
               src={"/home/search-icon.png"}
@@ -94,16 +105,16 @@ const Header = () => {
           </div>
           <div className={styles["header-icon"]}>
             <Image
-            onClick={()=>{
-              setCartIsOpen(true)
-            }}
+              onClick={() => {
+                setCartIsOpen(true);
+              }}
               src={"/layout/cart.png"}
               width={30}
               height={30}
               alt="Carrito de compras"
             />
             <div className={styles["cart-number"]}>
-              <p>5</p>
+              <p>{total}</p>
             </div>
           </div>
         </div>
@@ -111,8 +122,15 @@ const Header = () => {
 
       <nav className={styles["nav"]}>
         <div className={styles["header-input"]}>
-          <input placeholder="Buscar productos..." type="text" />
-          <button>
+          <input 
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleSearch();
+            }}    
+          placeholder="Buscar productos..."
+          type="text" />
+          <button onClick={handleSearch}>
             <Image
               alt="Icono de buscar"
               src={"/home/search-icon.png"}
@@ -124,7 +142,7 @@ const Header = () => {
 
         <ul>
           <li>
-            <Link href={"/catalogo"}>Catalogo de productos</Link>
+            <Link href={`/catalogo?busqueda=`}>Catalogo de productos</Link>
           </li>
           <li>
             <Link href={"/empresa"}>Empresa</Link>

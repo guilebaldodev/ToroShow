@@ -44,7 +44,7 @@ const Dashboard = () => {
             <Image src="/layout/admin/purple-category.png" alt="Categorias Icon" width={24} height={24} />
           </div>
           <div className={styles['dashboard-item-texts']}>
-            <p className={styles['text-title']}>150</p>
+            <p className={styles['text-title']}>4</p>
             <p className={styles['text-subtitle']}>Categorias</p>
           </div>
         </div>

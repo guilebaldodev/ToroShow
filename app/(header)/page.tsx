@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -5,10 +6,24 @@ import { bullCatalog, Product } from "@/consts";
 import ProductCard from "../ui/Product";
 
 export default function Home() {
+
+  const message = encodeURIComponent('¡Buenos dias! Me gustaría recibir más información sobre los toros.');
+  const whatsAppURL = `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${message}`;
+
+
+const categoryOptions = [
+  { value: "Toro Mecanico", label: "Toro Mecánico" },
+  { value: "Refacciones", label: "Refacciones" },
+  { value: "Inflable", label: "Inflable" },
+  { value: "Accesorio", label: "Accesorio" },
+];
+
+
   return (
     <>
     
     <div className={styles['landing-page']}>
+
       <div className={styles['hero-container']}>
         <div className={styles['hero-texts']}>
           <h1>
@@ -39,8 +54,8 @@ export default function Home() {
           <p>Refacciones</p>
         </div>
         <div className={styles['category-item']}>
-          <Image src="/home/arcade-type.png" alt="Maquinitas" width={40} height={40} />
-          <p>Maquinitas</p>
+          <Image src="/home/motor.png" alt="Maquinitas" width={40} height={40} />
+          <p>Accesorios</p>
         </div>
       </div>
 
@@ -63,6 +78,7 @@ export default function Home() {
 
           </div>
           <div className={styles['banner-texts']}>
+            
             <h2>SOMOS LOS LÍDERES EN TOROS MECÁNICOS PARA EMPRENDEDORES</h2>
             <p>
               Fabricamos toros mecánicos de alta calidad, diseñados para ayudarte a iniciar o expandir tu negocio de
@@ -133,7 +149,13 @@ export default function Home() {
           Aprovecha la oportunidad de un nicho rentable y recupera tu inversión rápidamente. Contamos con el catálogo
           más completo de toros mecánicos. ¡Contáctanos por WhatsApp y empieza tu negocio hoy mismo!
         </p>
-        <button>¡Mándanos un WhatsApp!</button>
+
+         <a 
+         href={whatsAppURL}
+        target="_blank" rel="noopener noreferrer">
+        ¡Mándanos un WhatsApp!
+        </a>
+
       </div>
     </div>
     

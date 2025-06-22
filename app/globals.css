@@ -221,6 +221,8 @@ input,button,textarea,select{
 
 .footer-developer{
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -502,12 +504,102 @@ summary{
   margin-right: 1px !important;
 }
 
-/*  */
+
+/* Product solo detail */
+
+
+  .product-detail-property{
+    padding-top: 1rem;
+  }
+  
+  .product-detail-property h4{
+    padding-bottom: 0.5rem;
+    color: black;
+  
+  }
+  
+  .product-detail-description{
+    padding-top: 1rem;
+  }
+  
+  .product-detail-description h4{
+    padding-bottom: 0.5rem;
+    color: black;
+  
+  }
+  
+  .product-detail-include h4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+  
+  }
+  
+  .product-detail-include ul li{
+    padding: 5px 0;
+  }
 
 
 
 
+/* loader */
 
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mini-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.mini-spinner:after {
+  content: " ";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: mini-spinner 0.8s linear infinite;
+}
+@keyframes mini-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.Toastify__toast {
+  background: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 
 
@@ -604,6 +696,11 @@ summary{
 
   .footer-section ul li{
     overflow-wrap: anywhere;
+  }
+
+  .footer-developer{
+    flex-direction: column;
+    gap: 10px;
   }
 
   .title h3{

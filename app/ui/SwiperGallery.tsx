@@ -8,20 +8,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-const images = [
-  "/products/bulls/product-1.webp",
-  "/products/bulls/product-2.webp",
-  "/products/bulls/product-3.webp",
-  "/products/bulls/product-4.webp",
-  "/products/bulls/product-5.webp",
-];
 
-export default function Gallery() {
+type GalleryProps = {
+  images: string[];
+};
+
+
+export default function Gallery({images}:GalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <div className="gallery">
-      {/* Slider principal */}
       <Swiper
         modules={[Navigation, Thumbs]}
         spaceBetween={10}

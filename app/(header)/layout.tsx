@@ -1,6 +1,9 @@
+import { ToastContainer } from "react-toastify";
 import Footer from "../ui/Footer";
 import Header from "../ui/Header";
 import WhatsAppButton from "../ui/WhatsappButton";
+
+
 
 export default function HeaderLayout({
     children,
@@ -13,6 +16,8 @@ export default function HeaderLayout({
             {children}
           <Footer></Footer>
           <WhatsAppButton></WhatsAppButton>
+              <ToastContainer position="bottom-left" autoClose={2000} />
+
         </>
 
         );

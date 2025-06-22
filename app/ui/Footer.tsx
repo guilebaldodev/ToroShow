@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import config from "@/config/config.json";
+
+
+
 
 const Footer = () => {
     return ( 
@@ -41,7 +45,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <Image src="/layout/whatsapp-icon.png" alt="WhatsApp" width={22} height={22} />
-                            <Link href="">7443112193</Link>
+                            <Link href="">{config.contactPhone}</Link>
                         </li>
                     </ul>
                 </div>
@@ -55,12 +59,12 @@ const Footer = () => {
                         </li>
                         <li>
                             <Image src="/layout/phone-icon.png" alt="Teléfono" width={22} height={22} />
-                            <p>7443112193</p>
+                            <p>{config.contactPhone}</p>
                         </li>
                         <li>
                             <Image src="/layout/ubication-icon.png" alt="Ubicación" width={22} height={22} />
                             <p>
-                            Acapulco Guerrero.
+                            Mexico.
                             </p>
                         </li>
                     </ul>
@@ -68,7 +72,12 @@ const Footer = () => {
             </div>
 
             <div className="footer-developer">
-                Copyright TorosMx - 2024. Todos los derechos reservados.
+                
+                <p>
+                    Copyright TorosMx - 2024. Todos los derechos reservados.
+                </p>
+            
+                <p>Contacta al programador: 74431121923</p>
             </div>
         </footer>  
     </> );
