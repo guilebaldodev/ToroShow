@@ -56,11 +56,11 @@ const AdminProducts = () => {
                     <td>{id + 1}</td>
                     <td>
                       <div className={styles['td-image']}>
-                        <Image src={`/products/bulls/${bull.img}`} alt={bull.titulo} width={40} height={40} />
+                        <Image src={`${bull.img[0]}`} alt={bull.titulo} width={40} height={40} />
                         <p>{bull.titulo}</p>
                       </div>
                     </td>
-                    <td>{bull.descripcion}</td>
+                    <td>{bull.categoria}</td>
                     <td className={styles['td-center']}>${bull.precio}</td>
                     <td className={styles['td-actions']}>
                       <div>
@@ -69,7 +69,7 @@ const AdminProducts = () => {
                         <Image src="/admin/edit.png" alt="Edit Icon" width={24} height={24} />
                       </Link>
 
-                      <Link href="">
+                      <Link href={`/catalogo/${bull.id}`}>
                         <Image src="/admin/eye.png" alt="View Icon" width={24} height={24} />
                       </Link>
 

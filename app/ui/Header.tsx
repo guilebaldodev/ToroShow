@@ -95,7 +95,7 @@ const Header = () => {
         </div>
 
         <div className={styles["header-icons"]}>
-          <div className={styles["header-icon"]}>
+          <div onClick={()=>router.push("/panel-de-control/estadisticas")} className={styles["header-icon"]}>
             <Image
               src={"/layout/user-icon.png"}
               width={32}

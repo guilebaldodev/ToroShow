@@ -14,7 +14,7 @@ const Dashboard = () => {
             <Image src="/layout/admin/red-earnings.png" alt="Ganancias Icon" width={24} height={24} />
           </div>
           <div className={styles['dashboard-item-texts']}>
-            <p className={styles['text-title']}>150</p>
+            <p className={styles['text-title']}>$560,000</p>
             <p className={styles['text-subtitle']}>Ganancias</p>
           </div>
         </div>
@@ -24,7 +24,7 @@ const Dashboard = () => {
             <Image src="/layout/admin/green-delivery.png" alt="Ventas Icon" width={24} height={24} />
           </div>
           <div className={styles['dashboard-item-texts']}>
-            <p className={styles['text-title']}>150</p>
+            <p className={styles['text-title']}>50</p>
             <p className={styles['text-subtitle']}>Ventas</p>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Dashboard = () => {
             <Image src="/layout/admin/blue-bull.png" alt="Productos Icon" width={24} height={24} />
           </div>
           <div className={styles['dashboard-item-texts']}>
-            <p className={styles['text-title']}>150</p>
+            <p className={styles['text-title']}>70</p>
             <p className={styles['text-subtitle']}>Productos</p>
           </div>
         </div>

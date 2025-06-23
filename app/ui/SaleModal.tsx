@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./css/Modal.module.css";
 
-import {Select, SelectSection, SelectItem} from "@nextui-org/select";
+// import {Select, SelectSection, SelectItem} from "@nextui-org/select";
 import { bullCatalog, BullCategories } from "@/consts";
 
 

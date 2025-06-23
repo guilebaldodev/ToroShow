@@ -68,7 +68,7 @@ const AdminSales = () => {
                     <td>{id + 1}</td>
                     <td>
                       <div className={styles['td-image']}>
-                        <Image src={`/products/bulls/${bull.img}`} alt={bull.titulo} width={40} height={40} />
+                        <Image src={`${bull.img}`} alt={bull.titulo} width={40} height={40} />
                         <p>{bull.titulo}</p>
                       </div>
                     </td>

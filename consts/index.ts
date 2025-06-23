@@ -140,70 +140,67 @@ export const bullCatalog: Product[] = [
 export const BullCategories=[
     {
         nombre:"Toro mecánico",
-        productos:55
+        productos:7
 
     },
     {
         nombre:"Refacciones",
-        productos:75
+        productos:1
     },
     {
-        nombre:"Inflabe",
-        productos:20
+        nombre:"Inflabes",
+        productos:1
     },
     {
-        nombre:"Accesorio",
-        productos:18
+        nombre:"Accesorios",
+        productos:1
     }
 ]
 
 
 export const bullSales = [
-
-    {
-        titulo: "Toro Compacto para Espacios Reducidos",
-        descripcion: "Toro mecánico",
-        precio: 76500,
-        img: "product-7.webp",
-        estado:"pagado",
-        fecha:"16/10/2024",
-        color:"green"
-    },
-    {
-        titulo: "Toro mecanico deluxe el más pro del mundo",
-        descripcion: "Toro mecánico",
-        precio: 94000,
-        img: "product-8.webp",
-        estado:"pagado",
-        fecha:"16/10/2024",
-        color:"green"
-
-
-    },
-    {
-        titulo: "Toro mecanico deluxe",
-        descripcion: "Toro mecánico",
-        precio: 79500,
-        img: "product-10.webp",
-        estado:"pendiente",
-        fecha:"20/10/2024",
-        color:"gold"
-
-
-    },
-    {
-        titulo: "Toro mecanico deluxe",
-        descripcion: "Toro mecánico",
-        precio: 71500,
-        anterior: 86000,
-        img: "product-5.webp",
-        estado:"Cancelado",
-        fecha:"20/10/2024",
-        color:"red"
-
-
-    }
-]
+  {
+    id: 7,
+    titulo: "Toro Compacto para Espacios Reducidos",
+    descripcion: "Toro mecánico",
+    precio: 76500,
+    img: "/products/bulls/product-7/product-7-1.webp",
+    estado: "pagado",
+    fecha: "16/10/2024",
+    color: "green",
+  },
+  {
+    id: 8,
+    titulo: "Motor industrial para colchon",
+    descripcion: "Toro mecánico",
+    precio: 4000,
+    img: "/products/bulls/product-8/product-8-2.webp",
+    estado: "pagado",
+    fecha: "16/10/2024",
+    color: "green",
+  },
+  {
+    id: 9,
+    titulo: "Colchon de toro mecanico",
+    descripcion: "Toro mecánico",
+    precio: 45000,
+    img: "/products/bulls/product-9/product-9-1.webp",
+    estado: "pendiente",
+    fecha: "20/10/2024",
+    color: "gold",
+  },
+  {
+    id: 6,
+    titulo: "Furia Imparable",
+    descripcion: "Toro mecánico",
+    precio: 89000,
+    anterior: 96000,
+    img: "/products/bulls/product-5/product-5-1.webp",
+    estado: "Cancelado",
+    fecha: "20/10/2024",
+    color: "red",
+  },
+];
 
 
 export const salesBarChart={
