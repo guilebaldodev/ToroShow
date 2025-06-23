@@ -38,7 +38,7 @@ const AdminAccount = () => {
           </div>
 
           <div className={styles['admin-texts']}>
-            <h5>Guilebaldo Vargas Solis</h5>
+            <h5>Santiago Gimenez</h5>
             <p>administrador@gmail.com</p>
             <p>Administrador</p>
           </div>
